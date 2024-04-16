@@ -17,36 +17,54 @@
 //  ---------------------- Variable & Constants -----------------------
 
 
-var age = 20;
+// var age = 20;
 
-var myName = 'Hamza';
+// var myName = 'Hamza';
 
-const id = 10101;
+// const id = 10101;
 
-console.log(myName);  // Hamza
-console.log(age);    // 20
-console.log(id);    // 10101
+// console.log(myName);  // Hamza
+// console.log(age);    // 20
+// console.log(id);    // 10101
 
-age = 21; 
-id = 10102; 
+// age = 21; 
+// id = 10102; 
 
-console.log(age) // 21 
-console.log(id) // will throw error as constants are immutable (Can't be changed)
-                // Uncaught TypeError: Assignment to constant variable.
+// console.log(age) // 21 
+// console.log(id) // will throw error as constants are immutable (Can't be changed)
+//                 // Uncaught TypeError: Assignment to constant variable.
 
 
 //  ---------------------- Data Types  -----------------------
 
-// Primitive data types and reference data types
+// // Primitive data types and reference data types
 
-// primitive
-var age = 20;                // integer
-var name = "Hamza";         // String
-var paid = false;          // boolean
-var cgpa = 3.82;          // float
-var role = undefined;   // not defined yet
-var phone = null;       // null
+// // primitive
+// var age = 20;                // integer
+// var name = "Hamza";         // String
+// var paid = false;          // boolean
+// var cgpa = 3.82;          // float
+// var role = undefined;   // not defined yet
+// var phone = null;       // null
 
-// Reference 
+// // Reference 
 
-// {} , [] , () datatypes that contain these braces are called reference datatype
+// // {} , [] , () datatypes that contain these braces are called reference datatype
+
+
+//  ---------------------- Conditionals  -----------------------
+
+// if else else if , ternery operator & switch case
+
+marks = prompt("Enter your marks :")
+
+if(marks > 75){
+    console.log("Excellent")
+}
+else if(marks < 45){
+    console.log("Very Poor")
+}
+else{
+    console.log("Good but not satisfactory")
+}
+
