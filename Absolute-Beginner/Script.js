@@ -1,4 +1,4 @@
-//  ---------------------- Browser Builtin -----------------------
+//  ---------------------- 1. Browser Builtin -----------------------
 // // console, alert, prompt
 
 // // Console (.log, .warn, .error)
@@ -14,7 +14,7 @@
 // prompt("What is Your name?") // Used to get user input 
 
 
-//  ---------------------- Variable & Constants -----------------------
+//  ---------------------- 2. Variable & Constants -----------------------
 
 
 // var age = 20;
@@ -35,7 +35,7 @@
 //                 // Uncaught TypeError: Assignment to constant variable.
 
 
-//  ---------------------- Data Types  -----------------------
+//  ---------------------- 3. Data Types -----------------------
 
 // // Primitive data types and reference data types
 
@@ -52,19 +52,47 @@
 // // {} , [] , () datatypes that contain these braces are called reference datatype
 
 
-//  ---------------------- Conditionals  -----------------------
+//  ---------------------- 4. Conditionals -----------------------
 
-// if else else if , ternery operator & switch case
+// // if else else if , ternery operator & switch case
 
-marks = prompt("Enter your marks :")
+// marks = prompt("Enter your marks :")
 
-if(marks > 75){
-    console.log("Excellent")
+// if(marks > 75){
+//     console.log("Excellent")
+// }
+// else if(marks < 45){
+//     console.log("Very Poor")
+// }
+// else{
+//     console.log("Good but not satisfactory")
+// }
+
+
+//  ---------------------- 5. Loops -----------------------
+
+// For loop, while loop, for each
+
+// for loop (syntax)
+
+// for(start ; end ; change/condition){
+
+// }
+
+for(var i=0; i<10 ;i++){
+    console.log(i)
+} 
+
+// while loop (syntax)
+
+// start;
+// while(end){
+
+//     change/condition
+// }
+
+var i=0;
+while(i<10){
+    console.log(i);
+    i++;
 }
-else if(marks < 45){
-    console.log("Very Poor")
-}
-else{
-    console.log("Good but not satisfactory")
-}
-
