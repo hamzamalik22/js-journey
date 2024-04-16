@@ -33,3 +33,20 @@ id = 10102;
 console.log(age) // 21 
 console.log(id) // will throw error as constants are immutable (Can't be changed)
                 // Uncaught TypeError: Assignment to constant variable.
+
+
+//  ---------------------- Data Types  -----------------------
+
+// Primitive data types and reference data types
+
+// primitive
+var age = 20;                // integer
+var name = "Hamza";         // String
+var paid = false;          // boolean
+var cgpa = 3.82;          // float
+var role = undefined;   // not defined yet
+var phone = null;       // null
+
+// Reference 
+
+// {} , [] , () datatypes that contain these braces are called reference datatype
