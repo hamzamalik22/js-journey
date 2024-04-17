@@ -71,28 +71,69 @@
 
 //  ---------------------- 5. Loops -----------------------
 
-// For loop, while loop, for each
+// // For loop, while loop, for each
 
-// for loop (syntax)
+// // for loop (syntax)
 
-// for(start ; end ; change/condition){
+// // for(start ; end ; change/condition){
 
+// // }
+
+// for(var i=0; i<10 ;i++){
+//     console.log(i)
+// } 
+
+// // while loop (syntax)
+
+// // start;
+// // while(end){
+
+// //     change/condition
+// // }
+
+// var i=0;
+// while(i<10){
+//     console.log(i);
+//     i++;
 // }
 
-for(var i=0; i<10 ;i++){
-    console.log(i)
-} 
 
-// while loop (syntax)
+//  ---------------------- 6. Functions -----------------------
 
-// start;
-// while(end){
+// Functions in es5
 
-//     change/condition
-// }
-
-var i=0;
-while(i<10){
-    console.log(i);
-    i++;
+// 1. Function Statement
+function printName(){
+    console.log("Hamza")
 }
+
+printName()
+
+// 2. Function expression
+
+var abcd = function(){
+    
+}
+
+// 3. anonymous function
+
+function(){
+
+}
+
+
+// Functions in es6
+
+// 1. Basic fat Arrow
+
+var a = ()=>{
+
+};
+
+// 2. fat arrow with 1 parameter
+
+var g = (ab)=>{};
+g(12);
+
+// 3. Implicit return function
+var abcd = ()=>12;
