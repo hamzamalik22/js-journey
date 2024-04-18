@@ -100,40 +100,60 @@
 
 //  ---------------------- 6. Functions -----------------------
 
-// Functions in es5
+// // Functions in es5
 
-// 1. Function Statement
-function printName(){
-    console.log("Hamza")
-}
+// // 1. Function Statement
+// function printName(){
+//     console.log("Hamza")
+// }
 
-printName()
+// printName()
 
-// 2. Function expression
+// // 2. Function expression
 
-var abcd = function(){
+// var abcd = function(){
     
-}
+// }
 
-// 3. anonymous function
+// // 3. anonymous function
 
-function(){
+// function(){
 
-}
+// }
 
 
-// Functions in es6
+// // Functions in es6
 
-// 1. Basic fat Arrow
+// // 1. Basic fat Arrow
 
-var a = ()=>{
+// var a = ()=>{
 
+// };
+
+// // 2. fat arrow with 1 parameter
+
+// var g = (ab)=>{};
+// g(12);
+
+// // 3. Implicit return function
+// var abcd = ()=>12;
+
+
+//  ---------------------- 7. Arrays & Objects -----------------------
+
+// Array 
+
+var a = [1,2,3,4,5,6,7,8,9,10];
+
+a[0];
+
+// Object
+
+var human = {
+    Name : 'Hamza',
+    reg_no : '22-CS-86',
+    section : 'alpha',
+    cgpa : 3.82
 };
 
-// 2. fat arrow with 1 parameter
-
-var g = (ab)=>{};
-g(12);
-
-// 3. Implicit return function
-var abcd = ()=>12;
+console.log(human);
