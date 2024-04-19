@@ -36,26 +36,91 @@
 
 //  ---------------------- 5. Promise -----------------------
 
-let theEpic = new Promise(function (resolve, reject) {
-  fetch(`https://randomuser.me/api/`)
-    .then((raw) => raw.json())
-    .then((response) => {
-      if (response.results[0].gender === "male") {
-        console.log(response.results[0].gender,'💚');
-        resolve();
-      } else {
-        console.log(response.results[0].gender,'❤️');
-        reject();
-      }
-    });
-});
+// let theEpic = new Promise(function (resolve, reject) {
+//   fetch(`https://randomuser.me/api/`)
+//     .then((raw) => raw.json())
+//     .then((response) => {
+//       if (response.results[0].gender === "male") {
+//         console.log(response.results[0].gender,'💚');
+//         resolve();
+//       } else {
+//         console.log(response.results[0].gender,'❤️');
+//         reject();
+//       }
+//     });
+// });
 
-console.log("Hello");
+// console.log("Hello");
 
-theEpic
-  .then(() => {
-    console.log("green light");
-  })
-  .catch(() => {
-    console.log("red light");
-  });
+// theEpic
+//   .then(() => {
+//     console.log("green light");
+//   })
+//   .catch(() => {
+//     console.log("red light");
+//   });
+
+//  ---------------------- 6. Callbacks -----------------------
+
+// let getData1 = (url,Callback)=>{
+//     fetch(url)
+//     .then(raw => raw.json())
+//     .then(result => {
+//         Callback(result)
+//     })
+// }
+
+// getData1(`https://randomuser.me/api/`, result =>{
+//     console.log(result.results[0].gender,result.results[0].email, result.results[0].name.first)
+// } )
+
+
+//  ----------------- 7. Promise vs Callbacks vs Async Await --------------------
+
+// Callbacks
+
+let getData1 = (url,Callback)=>{
+    fetch(url)
+    .then(raw => raw.json())
+    .then(result => {
+        Callback(result)
+    })
+}
+
+getData1(`https://randomuser.me/api/`, result =>{
+    console.log(result.results[0].gender,result.results[0].email, result.results[0].name.first,'1')
+} )
+
+
+// Promise
+
+function getData(url){
+    let myData = new Promise(function(resolve,reject){
+        fetch(url)
+        .then(raw => raw.json())
+        .then(result => {
+            resolve(result);
+        })
+        return mydata;
+    })
+}
+
+getData(`https://randomuser.me/api/`)
+.then(function(result){
+    console.log(result.results[0].gender,result.results[0].email, result.results[0].name.first,'2')
+})
+
+// Async Await
+
+async function getData(url){
+    let myData = await fetch(url);
+    let result = await myData.json();
+    return result;
+}
+
+async function caller(){
+    let data = await getData(`https://randomuser.me/api/`);
+    console.log(data.results[0].gender,data.results[0].email, data.results[0].name.first,'3');
+}
+
+caller();
