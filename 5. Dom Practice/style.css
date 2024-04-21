@@ -99,3 +99,13 @@ input{
     border: 1px solid #dadada;
     outline-color: royalblue;
 }
+
+
+textarea{
+    width: 400px;
+    height: 130px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #dadada;
+    outline-color: royalblue;
+}
