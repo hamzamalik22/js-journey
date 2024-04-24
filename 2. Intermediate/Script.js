@@ -13,81 +13,81 @@ This keyword behave differently according to different conditions
 
 */
 
-// console.log(this)  // 1. global : window
+console.log(this)  // 1. global : window
 
 
-// function joke(){
-//     console.log(this)  // 2. function : window
-// }
-// joke()
+function joke(){
+    console.log(this)  // 2. function : window
+}
+joke()
 
 
-// var obj = {
-//     myJoke : function(){
-//         console.log(this);  // 3. method : object
-//     },
-//     body : "Knock knock!",
-//     reacts : 25
-// }
-// obj.myJoke()
+var obj = {
+    myJoke : function(){
+        console.log(this);  // 3. method : object
+    },
+    body : "Knock knock!",
+    reacts : 25
+}
+obj.myJoke()
 
 
-// var obj2 = {
-//     getName : function(){
-//         function myName(){
-//             console.log(this)  // 4. fnc inside a method (es5) - window
-//         }
-//         myName();
-//     }
+var obj2 = {
+    getName : function(){
+        function myName(){
+            console.log(this)  // 4. fnc inside a method (es5) - window
+        }
+        myName();
+    }
 
-// }
-// obj2.getName()
+}
+obj2.getName()
 
 
 
-// var obj3 = {
-//     getAge : function(){
-//         const myAge = ()=>{
-//             console.log(this); // 5. fnc inside a method (es6) - object
-//         }
-//         myAge();
-//     }
+var obj3 = {
+    getAge : function(){
+        const myAge = ()=>{
+            console.log(this); // 5. fnc inside a method (es6) - object
+        }
+        myAge();
+    }
 
-// }
-// obj3.getAge();
+}
+obj3.getAge();
 
 
 //  ---------------------- 2. Prototypal inheritance -----------------------
 
-// // example 1
-// function myAnimal(specie,cuteness_index){
-//     this.specie = specie;
-//     this.cuteness_index = cuteness_index;
-// }
+// example 1
+function myAnimal(specie,cuteness_index){
+    this.specie = specie;
+    this.cuteness_index = cuteness_index;
+}
 
-// myAnimal.prototype.findSpecie = function(){
-//     console.log(this.specie);
-// }
+myAnimal.prototype.findSpecie = function(){
+    console.log(this.specie);
+}
 
-// var animal1 = new myAnimal('Cat',1)
-// var animal2 = new myAnimal('Dog',9)
-// var animal3 = new myAnimal('Panda',3)
+var animal1 = new myAnimal('Cat',1)
+var animal2 = new myAnimal('Dog',9)
+var animal3 = new myAnimal('Panda',3)
 
-// // example 2
+// example 2
 
-// function makeHuman(name,age,ethnicity){
-//     this.name = name;
-//     this.age = age;
-//     this.ethnicity = ethnicity;
-// }
+function makeHuman(name,age,ethnicity){
+    this.name = name;
+    this.age = age;
+    this.ethnicity = ethnicity;
+}
 
-// makeHuman.prototype.giveBio = function(){
-//     console.log(this.name , this.ethnicity)
-// }
+makeHuman.prototype.giveBio = function(){
+    console.log(this.name , this.ethnicity)
+}
 
-// let human1 = new makeHuman('Hamza',20,'Pakistani')
-// let human2 = new makeHuman('Jofra Archer',32,'English')
-// let human3 = new makeHuman('Dhruv Rathee',39,'Indian')
+let human1 = new makeHuman('Hamza',20,'Pakistani')
+let human2 = new makeHuman('Jofra Archer',32,'English')
+let human3 = new makeHuman('Dhruv Rathee',39,'Indian')
 
 //  ---------------------- 3. Closure -----------------------
 
